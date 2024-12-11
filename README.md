@@ -10,7 +10,7 @@ make EXAMPLE=01_sum SIM_OPTS=-gui
 iverilog -g2005-sv -s testbench *.sv && echo finish | vvp ./a.out && gtkwave dump.vcd
 ```
 
-Только не забудьте добавить $dumpvars; в тестбенче (testbench.sv)
+Только не забудьте добавить $dumpvars; в тестбенче ```testbench.sv ```
 ```
         `ifdef __ICARUS__
         // Uncomment the following line
@@ -19,3 +19,4 @@ iverilog -g2005-sv -s testbench *.sv && echo finish | vvp ./a.out && gtkwave dum
             $dumpvars;
         `endif
 ```
+больше материала есть [тут](https://github.com/serge0699/synth_school_verif_tasks) (github автора - Чусов Сергей, инженер по верификации)
